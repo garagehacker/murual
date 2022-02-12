@@ -19,7 +19,9 @@
 
 <section class="content">
     <div class="container-fluid">
+
         <!-- Info boxes -->
+        @role('admin')
         <div class="row">
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="info-box">
@@ -81,7 +83,73 @@
             </div>
             <!-- /.col -->
         </div>
+        @endrole
         <!-- /.row -->
+        @role('user')
+        <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped table-responsive">
+                <thead>
+                <tr>
+                    <th>Folio No.</th>
+                    <th>Scheme Name</th>
+                    <th>Unit Balance</th>
+                    <th>Start Date</th>
+                    <th>Current Nav</th>
+                    <th>Current Value</th>
+                    <th>Profit/loss</th>
+                    <th>Average Cost Price</th>
+                    <th>Purchase Cost Price</th>
+                    <th>Init Paid</th>
+                    <th>Init Reinv</th>
+                    <th>No of Days</th>
+                    <th>ABS %</th>
+                    <th>CAGR</th>
+                    <th>XIRR</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($folios as $key=>$folio)
+                    <tr>
+                        <td>{{$folio->nfo_folio_no}}</td>
+                        <td>{{$folio->nfo_product_name}}</td>
+                        <td>{{$folio->nfo_balance_unit}}</td>
+                        <td>{{$folio->nfo_start_date}}</td>
+                        <td>{{$folio->nfo_current_nav}}</td>
+                        <td>{{$folio->nfo_curret_value}}</td>
+                        <td>{{$folio->nfo_profile_plus_loss}}</td>
+                        <td>{{$folio->nfo_avg_cost_price}}</td>
+                        <td>{{$folio->nfo_purchase_cost_price}}</td>
+                        <td>{{$folio->nfo_div_init_paid}}</td>
+                        <td>{{$folio->nfo_div_init_reinv}}</td>
+                        <td>{{$folio->nfo_no_days}}</td>
+                        <td>{{$folio->nfo_abs_percentage}}</td>
+                        <td>{{$folio->nfo_cagr}}</td>
+                        <td>{{$folio->nfo_xirr}}</td>
+                    </tr>
+                @endforeach
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Folio No.</th>
+                    <th>Scheme Name</th>
+                    <th>Unit Balance</th>
+                    <th>Start Date</th>
+                    <th>Current Nav</th>
+                    <th>Current Value</th>
+                    <th>Profit/loss</th>
+                    <th>Average Cost Price</th>
+                    <th>Purchase Cost Price</th>
+                    <th>Init Paid</th>
+                    <th>Init Reinv</th>
+                    <th>No of Days</th>
+                    <th>ABS %</th>
+                    <th>CAGR</th>
+                    <th>XIRR</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+        @endrole
 
         {{--<div class="row">--}}
             {{--<div class="col-md-12">--}}

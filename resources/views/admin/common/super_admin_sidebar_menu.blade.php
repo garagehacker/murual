@@ -49,37 +49,74 @@
 
 
 
+
+
                 <li class="nav-header">User Management</li>
                 {{-- Users Start--}}
-                <li class="nav-item  {{ Route::currentRouteName()=='users.index' || Route::currentRouteName()=='users.create' ? 'menu-open' : 'menu-close' }}">
-                    <a href="#" class="nav-link">
+
+                <li class="nav-item">
+                    <a href="{{route('users.index')}}" class="nav-link  {{ Route::currentRouteName()=='users.index' || Route::currentRouteName()=='users.create' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-hospital-user"></i>
                         <p>
                             Users
-                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    {{--Admin User--}}
-                    {{--<ul class="nav nav-treeview">--}}
-                        {{--<li class="nav-item">--}}
-                            {{--<a href="" class="nav-link">--}}
-                                {{--<i class="nav-icon far fa-circle text-info"></i>--}}
-                                {{--<p>Access Control</p>--}}
-                            {{--</a>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                    {{--Admin User--}}
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('users.index')}}" class="nav-link {{ Route::currentRouteName()=='users.index' || Route::currentRouteName()=='users.create' ? 'active' : '' }}">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>User</p>
-                            </a>
-                        </li>
-                    </ul>
-
-
                 </li>
+                <li class="nav-header">Fund Management</li>
+                <li class="nav-item">
+                    <a href="{{route('funds.index')}}" class="nav-link  {{ Route::currentRouteName()=='funds.index' || Route::currentRouteName()=='funds.create' ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-money-bill-alt"></i>
+                        <p>
+                            Funds
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('equity_funds.index')}}" class="nav-link  {{ Route::currentRouteName()=='equity_funds.index' || Route::currentRouteName()=='equity_funds.create' ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-money-bill-alt"></i>
+                        <p>
+                            Equity Funds
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('debt_funds.index')}}" class="nav-link  {{ Route::currentRouteName()=='debt_funds.index' || Route::currentRouteName()=='debt_funds.create' ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-money-bill-alt"></i>
+                        <p>
+                            Debt Funds
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('hybrid_funds.index')}}" class="nav-link  {{ Route::currentRouteName()=='hybrid_funds.index' || Route::currentRouteName()=='hybrid_funds.create' ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-money-bill-alt"></i>
+                        <p>
+                            Hybrid Funds
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('others_funds.index')}}" class="nav-link  {{ Route::currentRouteName()=='others_funds.index' || Route::currentRouteName()=='others_funds.create' ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-money-bill-alt"></i>
+                        <p>
+                            Other Funds
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-header">Version Management</li>
+                <li class="nav-item">
+                    <a href="{{route('current_version.index')}}" class="nav-link  {{ Route::currentRouteName()=='current_version.index' ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-apple-alt"></i>
+                        <p>
+                           App Current Versions
+                        </p>
+                    </a>
+                </li>
+
                 {{-- Users End--}}
 
 

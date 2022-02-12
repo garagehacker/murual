@@ -35,15 +35,16 @@
     <link rel="stylesheet" href="{{asset('admin_assets/plugins/bs-stepper/css/bs-stepper.min.css')}}">
     <!-- dropzonejs -->
     <link rel="stylesheet" href="{{asset('admin_assets/plugins/dropzone/min/dropzone.min.css')}}">
+
     @stack('css')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__wobble" src="{{asset('admin_assets/dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
-    </div>
+{{--    <!-- Preloader -->--}}
+{{--    <div class="preloader flex-column justify-content-center align-items-center">--}}
+{{--        <img class="animation__wobble" src="{{asset('admin_assets/dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">--}}
+{{--    </div>--}}
 
     <!-- Navbar -->
     @include('admin.common.navbar')
@@ -52,11 +53,11 @@
     <!-- Main Sidebar Container Start-->
 
     {{--if role is Super Admin--}}
-    @role('super_admin')
+    @role('admin')
         @include('admin.common.super_admin_sidebar_menu')
     @endrole
     {{--if role is Admin--}}
-    @role('admin')
+    @role('user')
         @include('admin.common.admin_sidebar_menu')
     @endrole
 

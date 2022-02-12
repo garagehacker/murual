@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use App\Models\User;
+use App\Models\UserFolio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -16,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = Customer::all();
+        $users = User::all()->except(Auth::user()->id);
         return view('admin.backend.user.index' ,compact('users'));
     }
 
@@ -39,26 +41,19 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = new User();
-        $user->name = $request->name;
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
         $user->email = $request->email;
-         $name = substr($request->name, 0, 4);
-         $mobile = substr($request->mobile, 0, 4);
+        $name = $request->first_name;
+        $mobile = substr($request->mobile, 0, 4);
         $user->password = Hash::make($name.$mobile);
-        $user->assignRole('admin');
+        $user->mobile = $request->mobile;
+        $user->country = $request->country;
+        $user->zip_code = $request->zip_code;
+        $user->address = $request->address;
+        $user->is_status = 1;
+        $user->assignRole('user');
         $user->save();
-
-        if ($user->save() == true){
-            $customer = new Customer();
-            $customer->name = $request->name;
-            $customer->user_id = $user->id;
-            $customer->email = $request->email;
-            $customer->mobile = $request->mobile;
-            $customer->country = $request->country;
-            $customer->zip_code = $request->zip_code;
-            $customer->address = $request->address;
-            $customer->save();
-        }
-
 
         return redirect(route('users.index'))->with('message', 'User created successfully');
     }
@@ -82,7 +77,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.backend.user.edit', compact(['user','id']));
     }
 
     /**
@@ -94,7 +90,94 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->mobile = $request->mobile;
+        $user->country = $request->country;
+        $user->zip_code = $request->zip_code;
+        $user->address = $request->address;
+        $user->update();
+
+        return redirect(route('users.index'))->with('message', 'User updated successfully');
+    }
+
+    public function folio($id)
+    {
+        $user = User::where('id', $id)->first();
+        $folios = UserFolio::where('user_id', $id)->get();
+        return view('admin.backend.folio.index', compact(['id','folios','user']));
+    }
+
+    public function folioCreate($id)
+    {
+        return view('admin.backend.folio.create', compact('id'));
+    }
+
+    public function folioCreateStore($id, Request $request)
+    {
+        $user_folio = new UserFolio();
+        $user_folio->user_id = $id;
+        $user_folio->nfo_folio_no = $request->nfo_folio_no;
+        $user_folio->nfo_folio_type = $request->nfo_folio_type;
+        $user_folio->nfo_start_date = $request->nfo_start_date;
+        $user_folio->nfo_product_name = $request->nfo_product_name;
+        $user_folio->nfo_balance_unit = $request->nfo_balance_unit;
+        $user_folio->nfo_avg_cost_price = $request->nfo_avg_cost_price;
+        $user_folio->nfo_purchase_cost_price = $request->nfo_purchase_cost_price;
+        $user_folio->nfo_div_init_paid = $request->nfo_div_init_paid;
+        $user_folio->nfo_div_init_reinv = $request->nfo_div_init_reinv;
+        $user_folio->nfo_no_days = $request->nfo_no_days;
+        $user_folio->nfo_current_nav = $request->nfo_current_nav;
+        $user_folio->nfo_curret_value = $request->nfo_curret_value;
+        $user_folio->nfo_profile_plus_loss = $request->nfo_profile_plus_loss;
+        $user_folio->nfo_abs_percentage = $request->nfo_abs_percentage;
+        $user_folio->nfo_cagr = $request->nfo_cagr;
+        $user_folio->nfo_xirr = $request->nfo_xirr;
+        $user_folio->save();
+
+        return redirect(url('/folio',$id))->with('message', 'Folio successfully send');
+    }
+
+    public function folioEdit($id)
+    {
+        $user_folio = UserFolio::find($id);
+        return view('admin.backend.folio.edit', compact(['user_folio','id']));
+
+
+
+    }
+
+    public function folioEditUpdate($id, Request $request)
+    {
+        $user_folio = UserFolio::find($id);
+        $user_folio->nfo_folio_no = $request->nfo_folio_no;
+        $user_folio->nfo_folio_type = $request->nfo_folio_type;
+        $user_folio->nfo_start_date = $request->nfo_start_date;
+        $user_folio->nfo_product_name = $request->nfo_product_name;
+        $user_folio->nfo_balance_unit = $request->nfo_balance_unit;
+        $user_folio->nfo_avg_cost_price = $request->nfo_avg_cost_price;
+        $user_folio->nfo_purchase_cost_price = $request->nfo_purchase_cost_price;
+        $user_folio->nfo_div_init_paid = $request->nfo_div_init_paid;
+        $user_folio->nfo_div_init_reinv = $request->nfo_div_init_reinv;
+        $user_folio->nfo_no_days = $request->nfo_no_days;
+        $user_folio->nfo_current_nav = $request->nfo_current_nav;
+        $user_folio->nfo_curret_value = $request->nfo_curret_value;
+        $user_folio->nfo_profile_plus_loss = $request->nfo_profile_plus_loss;
+        $user_folio->nfo_abs_percentage = $request->nfo_abs_percentage;
+        $user_folio->nfo_cagr = $request->nfo_cagr;
+        $user_folio->nfo_xirr = $request->nfo_xirr;
+        $user_folio->update();
+
+        return redirect(url('/folio',$user_folio->user_id))->with('message', 'Folio update successfully');
+    }
+
+    public function folioDelete($id)
+    {
+        $folio = UserFolio::find($id);
+        $folio->delete();
+        return redirect(url('/folio',$folio->user_id))->with('delete', 'Date Deleted');
     }
 
     /**
@@ -105,6 +188,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect(url('/users'))->with('delete', 'Date Deleted');
     }
 }

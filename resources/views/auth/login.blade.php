@@ -130,30 +130,26 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8">
-                            <div class="icheck-primary">
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                <label for="remember">
-                                    {{ __('Remember Me') }}
-                                </label>
-                            </div>
-                        </div>
+                        {{--<div class="col-4">--}}
+                            {{--<div class="icheck-primary">--}}
+                                {{--<input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>--}}
+                                {{--<label for="remember">--}}
+                                    {{--{{ __('Remember Me') }}--}}
+                                {{--</label>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                         <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+
+                        <div class="col-6">
+                            <a href="{{url('/register')}}" class="btn btn-success btn-block">Register</a>
                         </div>
+                            <div class="col-6">
+                                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            </div>
                         <!-- /.col -->
                     </div>
                 </form>
 
-                <div class="social-auth-links text-center mt-2 mb-3">
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                    </a>
-                </div>
                 <!-- /.social-auth-links -->
 
                 <p class="mb-1">
