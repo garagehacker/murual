@@ -42,6 +42,20 @@ class OthersFundController extends Controller
         $other_fund->fund_url = $request->fund_url;
         $other_fund->fund_risk = $request->fund_risk;
         $other_fund->fund_return = $request->fund_return;
+        $other_fund->fund_age = $request->fund_age;
+        $other_fund->fund_nav = $request->fund_nav;
+        $other_fund->fund_aum = $request->fund_aum;
+        $other_fund->fund_goal = $request->fund_goal;
+        $other_fund->fund_info = $request->fund_info;
+        $other_fund->fund_entry_load = $request->fund_entry_load;
+        $other_fund->fund_exit_load = $request->fund_exit_load;
+        $other_fund->fund_min_sip = $request->fund_min_sip;
+        $other_fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $other_fund->fund_manager_name = $request->fund_manager_name;
+        $other_fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $other_fund->fund_manager_info = $request->fund_manager_info;
+        $other_fund->fund_return_1_year = $request->fund_return_1_year;
+        $other_fund->fund_return_3_year = $request->fund_return_3_year;
         $other_fund->save();
 
         return redirect(url('/others_funds'))->with('message', 'Other Fund successfully');
@@ -84,6 +98,21 @@ class OthersFundController extends Controller
         $other_fund->fund_url = $request->fund_url;
         $other_fund->fund_risk = $request->fund_risk;
         $other_fund->fund_return = $request->fund_return;
+
+        $other_fund->fund_age = $request->fund_age;
+        $other_fund->fund_nav = $request->fund_nav;
+        $other_fund->fund_aum = $request->fund_aum;
+        $other_fund->fund_goal = $request->fund_goal;
+        $other_fund->fund_info = $request->fund_info;
+        $other_fund->fund_entry_load = $request->fund_entry_load;
+        $other_fund->fund_exit_load = $request->fund_exit_load;
+        $other_fund->fund_min_sip = $request->fund_min_sip;
+        $other_fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $other_fund->fund_manager_name = $request->fund_manager_name;
+        $other_fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $other_fund->fund_manager_info = $request->fund_manager_info;
+        $other_fund->fund_return_1_year = $request->fund_return_1_year;
+        $other_fund->fund_return_3_year = $request->fund_return_3_year;
         $other_fund->update();
         return redirect(url('/others_funds'))->with('message', 'Other Fund updated successfully');
     }

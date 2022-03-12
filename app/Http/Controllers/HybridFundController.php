@@ -42,6 +42,20 @@ class HybridFundController extends Controller
         $hybrid_fund->fund_url = $request->fund_url;
         $hybrid_fund->fund_risk = $request->fund_risk;
         $hybrid_fund->fund_return = $request->fund_return;
+        $hybrid_fund->fund_age = $request->fund_age;
+        $hybrid_fund->fund_nav = $request->fund_nav;
+        $hybrid_fund->fund_aum = $request->fund_aum;
+        $hybrid_fund->fund_goal = $request->fund_goal;
+        $hybrid_fund->fund_info = $request->fund_info;
+        $hybrid_fund->fund_entry_load = $request->fund_entry_load;
+        $hybrid_fund->fund_exit_load = $request->fund_exit_load;
+        $hybrid_fund->fund_min_sip = $request->fund_min_sip;
+        $hybrid_fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $hybrid_fund->fund_manager_name = $request->fund_manager_name;
+        $hybrid_fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $hybrid_fund->fund_manager_info = $request->fund_manager_info;
+        $hybrid_fund->fund_return_1_year = $request->fund_return_1_year;
+        $hybrid_fund->fund_return_3_year = $request->fund_return_3_year;
         $hybrid_fund->save();
 
         return redirect(url('/hybrid_funds'))->with('message', 'Hybrid Fund successfully');
@@ -84,6 +98,21 @@ class HybridFundController extends Controller
         $hybrid_fund->fund_url = $request->fund_url;
         $hybrid_fund->fund_risk = $request->fund_risk;
         $hybrid_fund->fund_return = $request->fund_return;
+
+        $hybrid_fund->fund_age = $request->fund_age;
+        $hybrid_fund->fund_nav = $request->fund_nav;
+        $hybrid_fund->fund_aum = $request->fund_aum;
+        $hybrid_fund->fund_goal = $request->fund_goal;
+        $hybrid_fund->fund_info = $request->fund_info;
+        $hybrid_fund->fund_entry_load = $request->fund_entry_load;
+        $hybrid_fund->fund_exit_load = $request->fund_exit_load;
+        $hybrid_fund->fund_min_sip = $request->fund_min_sip;
+        $hybrid_fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $hybrid_fund->fund_manager_name = $request->fund_manager_name;
+        $hybrid_fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $hybrid_fund->fund_manager_info = $request->fund_manager_info;
+        $hybrid_fund->fund_return_1_year = $request->fund_return_1_year;
+        $hybrid_fund->fund_return_3_year = $request->fund_return_3_year;
         $hybrid_fund->update();
         return redirect(url('/hybrid_funds'))->with('message', 'Hybrid Fund updated successfully');
     }

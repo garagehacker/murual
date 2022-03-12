@@ -42,6 +42,20 @@ class DebtFundController extends Controller
         $debt_fund->fund_url = $request->fund_url;
         $debt_fund->fund_risk = $request->fund_risk;
         $debt_fund->fund_return = $request->fund_return;
+        $debt_fund->fund_age = $request->fund_age;
+        $debt_fund->fund_nav = $request->fund_nav;
+        $debt_fund->fund_aum = $request->fund_aum;
+        $debt_fund->fund_goal = $request->fund_goal;
+        $debt_fund->fund_info = $request->fund_info;
+        $debt_fund->fund_entry_load = $request->fund_entry_load;
+        $debt_fund->fund_exit_load = $request->fund_exit_load;
+        $debt_fund->fund_min_sip = $request->fund_min_sip;
+        $debt_fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $debt_fund->fund_manager_name = $request->fund_manager_name;
+        $debt_fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $debt_fund->fund_manager_info = $request->fund_manager_info;
+        $debt_fund->fund_return_1_year = $request->fund_return_1_year;
+        $debt_fund->fund_return_3_year = $request->fund_return_3_year;
         $debt_fund->save();
 
         return redirect(url('/debt_funds'))->with('message', 'Debt Fund successfully');
@@ -84,6 +98,20 @@ class DebtFundController extends Controller
         $debt_fund->fund_url = $request->fund_url;
         $debt_fund->fund_risk = $request->fund_risk;
         $debt_fund->fund_return = $request->fund_return;
+        $debt_fund->fund_age = $request->fund_age;
+        $debt_fund->fund_nav = $request->fund_nav;
+        $debt_fund->fund_aum = $request->fund_aum;
+        $debt_fund->fund_goal = $request->fund_goal;
+        $debt_fund->fund_info = $request->fund_info;
+        $debt_fund->fund_entry_load = $request->fund_entry_load;
+        $debt_fund->fund_exit_load = $request->fund_exit_load;
+        $debt_fund->fund_min_sip = $request->fund_min_sip;
+        $debt_fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $debt_fund->fund_manager_name = $request->fund_manager_name;
+        $debt_fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $debt_fund->fund_manager_info = $request->fund_manager_info;
+        $debt_fund->fund_return_1_year = $request->fund_return_1_year;
+        $debt_fund->fund_return_3_year = $request->fund_return_3_year;
         $debt_fund->update();
         return redirect(url('/debt_funds'))->with('message', 'Debt Fund updated successfully');
     }

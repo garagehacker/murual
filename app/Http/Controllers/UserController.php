@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\UsersFolioExport;
+use App\Imports\UsersFolioImport;
 use App\Models\Customer;
 use App\Models\User;
 use App\Models\UserFolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
@@ -125,13 +128,13 @@ class UserController extends Controller
         $user_folio->nfo_product_name = $request->nfo_product_name;
         $user_folio->nfo_balance_unit = $request->nfo_balance_unit;
         $user_folio->nfo_avg_cost_price = $request->nfo_avg_cost_price;
-        $user_folio->nfo_purchase_cost_price = $request->nfo_purchase_cost_price;
+        $user_folio->nfo_purchase_cost_price = '₹'." ". $request->nfo_purchase_cost_price;
         $user_folio->nfo_div_init_paid = $request->nfo_div_init_paid;
         $user_folio->nfo_div_init_reinv = $request->nfo_div_init_reinv;
         $user_folio->nfo_no_days = $request->nfo_no_days;
         $user_folio->nfo_current_nav = $request->nfo_current_nav;
-        $user_folio->nfo_curret_value = $request->nfo_curret_value;
-        $user_folio->nfo_profile_plus_loss = $request->nfo_profile_plus_loss;
+        $user_folio->nfo_curret_value = '₹'." ". $request->nfo_curret_value;
+        $user_folio->nfo_profile_plus_loss = '₹'." ". $request->nfo_profile_plus_loss;
         $user_folio->nfo_abs_percentage = $request->nfo_abs_percentage;
         $user_folio->nfo_cagr = $request->nfo_cagr;
         $user_folio->nfo_xirr = $request->nfo_xirr;
@@ -192,4 +195,28 @@ class UserController extends Controller
         $user->delete();
         return redirect(url('/users'))->with('delete', 'Date Deleted');
     }
+
+
+    public function fileImportExport()
+    {
+        return view('file-import');
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function fileImport(Request $request)
+    {
+        Excel::import(new UsersFolioImport, $request->file('file')->store('temp'));
+        return back();
+    }
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function fileExport()
+    {
+        return Excel::download(new UsersFolioExport, 'users-collection.xlsx');
+    }
+
+
 }

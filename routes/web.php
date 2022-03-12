@@ -38,4 +38,9 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::resource('current_version', \App\Http\Controllers\AppVersionController::class);
 
+
+    Route::get('file-import-export', [\App\Http\Controllers\UserController::class, 'fileImportExport']);
+    Route::post('file-import', [\App\Http\Controllers\UserController::class, 'fileImport'])->name('file-import');
+    Route::get('file-export', [\App\Http\Controllers\UserController::class, 'fileExport'])->name('file-export');
+
 });

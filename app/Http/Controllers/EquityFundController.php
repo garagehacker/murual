@@ -43,6 +43,20 @@ class EquityFundController extends Controller
         $equity->fund_url = $request->fund_url;
         $equity->fund_risk = $request->fund_risk;
         $equity->fund_return = $request->fund_return;
+        $equity->fund_age = $request->fund_age;
+        $equity->fund_nav = $request->fund_nav;
+        $equity->fund_aum = $request->fund_aum;
+        $equity->fund_goal = $request->fund_goal;
+        $equity->fund_info = $request->fund_info;
+        $equity->fund_entry_load = $request->fund_entry_load;
+        $equity->fund_exit_load = $request->fund_exit_load;
+        $equity->fund_min_sip = $request->fund_min_sip;
+        $equity->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $equity->fund_manager_name = $request->fund_manager_name;
+        $equity->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $equity->fund_manager_info = $request->fund_manager_info;
+        $equity->fund_return_1_year = $request->fund_return_1_year;
+        $equity->fund_return_3_year = $request->fund_return_3_year;
         $equity->save();
 
         return redirect(url('/equity_funds'))->with('message', 'Equity successfully');
@@ -86,6 +100,20 @@ class EquityFundController extends Controller
         $equity_fund->fund_url	 = $request->fund_url;
         $equity_fund->fund_risk	 = $request->fund_risk;
         $equity_fund->fund_return = $request->fund_return;
+        $equity_fund->fund_age = $request->fund_age;
+        $equity_fund->fund_nav = $request->fund_nav;
+        $equity_fund->fund_aum = $request->fund_aum;
+        $equity_fund->fund_goal = $request->fund_goal;
+        $equity_fund->fund_info = $request->fund_info;
+        $equity_fund->fund_entry_load = $request->fund_entry_load;
+        $equity_fund->fund_exit_load = $request->fund_exit_load;
+        $equity_fund->fund_min_sip = $request->fund_min_sip;
+        $equity_fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $equity_fund->fund_manager_name = $request->fund_manager_name;
+        $equity_fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $equity_fund->fund_manager_info = $request->fund_manager_info;
+        $equity_fund->fund_return_1_year = $request->fund_return_1_year;
+        $equity_fund->fund_return_3_year = $request->fund_return_3_year;
         $equity_fund->update();
         return redirect(url('/equity_funds'))->with('message', 'Equity updated successfully');
     }

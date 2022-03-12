@@ -65,14 +65,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Average Cost Price</label>
-                                    <input type="text" required name="nfo_avg_cost_price" class="form-control" id="exampleInputEmail1" placeholder="Enter Average Cost Price">
+                                    <label for="exampleInputPhone">Purchase Cost Price</label>
+                                    <input type="text"  required name="nfo_purchase_cost_price" class="form-control" id="nfo_purchase_cost_price" placeholder="Enter Purchase Cost Price">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputPhone">Purchase Cost Price</label>
-                                    <input type="text" required name="nfo_purchase_cost_price" class="form-control" id="exampleInputPhone" placeholder="Enter Purchase Cost Price">
+                                    <label for="exampleInputAlternativePhone">Current Value</label>
+                                    <input type="text"   required name="nfo_curret_value" class="form-control" id="nfo_curret_value" placeholder="Enter Current Value">
                                 </div>
                             </div>
                         </div>
@@ -109,14 +109,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputAlternativePhone">Current Value</label>
-                                    <input type="text" required name="nfo_curret_value" class="form-control" id="exampleInputAlternativePhone" placeholder="Enter NAV Value">
+                                    <label for="exampleInputEmail1">Average Cost Price</label>
+                                    <input type="text" onclick="profitLoss()" required name="nfo_avg_cost_price" class="form-control" id="exampleInputEmail1" placeholder="Enter Average Cost Price">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputAlternativePhone">Profit/Loss</label>
-                                    <input type="text" required name="nfo_profile_plus_loss" class="form-control" id="exampleInputAlternativePhone" placeholder="Enter Market Value">
+                                    <input type="text" required name="nfo_profile_plus_loss" class="form-control" id="nfo_profile_plus_loss" placeholder="Enter Market Value">
                                 </div>
                             </div>
 
@@ -156,6 +156,15 @@
             <!-- /.card -->
         </div>
     </section>
+
+    <script>
+        function profitLoss() {
+            var cost_price = $("#nfo_purchase_cost_price").val();
+            var current_value = $("#nfo_curret_value").val();
+            var profit_loss = current_value-cost_price;
+            $("#nfo_profile_plus_loss").val(profit_loss);
+        }
+    </script>
 
 @endsection
 

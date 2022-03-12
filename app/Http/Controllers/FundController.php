@@ -54,6 +54,20 @@ class FundController extends Controller
         $fund->nfo_url = $request->nfo_url;
         $fund->nfo_start_date = $request->nfo_start_date;
         $fund->nfo_end_date = $request->nfo_end_date;
+        $fund->fund_age = $request->fund_age;
+        $fund->fund_nav = $request->fund_nav;
+        $fund->fund_aum = $request->fund_aum;
+        $fund->fund_goal = $request->fund_goal;
+        $fund->fund_info = $request->fund_info;
+        $fund->fund_entry_load = $request->fund_entry_load;
+        $fund->fund_exit_load = $request->fund_exit_load;
+        $fund->fund_min_sip = $request->fund_min_sip;
+        $fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $fund->fund_manager_name = $request->fund_manager_name;
+        $fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $fund->fund_manager_info = $request->fund_manager_info;
+        $fund->fund_return_1_year = $request->fund_return_1_year;
+        $fund->fund_return_3_year = $request->fund_return_3_year;
         $fund->save();
 
         return redirect(route('funds.index'))->with('message', 'Fund created successfully');
@@ -97,6 +111,20 @@ class FundController extends Controller
         $fund->nfo_url = $request->nfo_url;
         $fund->nfo_start_date = $request->nfo_start_date;
         $fund->nfo_end_date = $request->nfo_end_date;
+        $fund->fund_age = $request->fund_age;
+        $fund->fund_nav = $request->fund_nav;
+        $fund->fund_aum = $request->fund_aum;
+        $fund->fund_goal = $request->fund_goal;
+        $fund->fund_info = $request->fund_info;
+        $fund->fund_entry_load = $request->fund_entry_load;
+        $fund->fund_exit_load = $request->fund_exit_load;
+        $fund->fund_min_sip = $request->fund_min_sip;
+        $fund->fund_min_lumpsum = $request->fund_min_lumpsum;
+        $fund->fund_manager_name = $request->fund_manager_name;
+        $fund->fund_manager_total_exp = $request->fund_manager_total_exp;
+        $fund->fund_manager_info = $request->fund_manager_info;
+        $fund->fund_return_1_year = $request->fund_return_1_year;
+        $fund->fund_return_3_year = $request->fund_return_3_year;
         $fund->update();
 
         return redirect(route('funds.index'))->with('message', 'Fund update successfully');

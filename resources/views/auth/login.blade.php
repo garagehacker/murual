@@ -141,7 +141,7 @@
                         <!-- /.col -->
 
                         <div class="col-6">
-                            <a href="{{url('/register')}}" class="btn btn-success btn-block">Register</a>
+{{--                            <a href="{{url('/register')}}" class="btn btn-success btn-block">Register</a>--}}
                         </div>
                             <div class="col-6">
                                 <button type="submit" class="btn btn-primary btn-block">Sign In</button>

@@ -53,6 +53,21 @@
                                     <th>URL</th>
                                     <th>Risk</th>
                                     <th>Return</th>
+                                    <th>Fund age</th>
+                                    <th>Fund nav</th>
+                                    <th>Fund aum</th>
+                                    <th>Fund goal</th>
+                                    <th>Fund info</th>
+                                    <th>Fund entry load</th>
+                                    <th>Fund exit load</th>
+                                    <th>Fund min sip</th>
+                                    <th>Fund min lumpsum</th>
+                                    <th>Fund manager name</th>
+                                    <th>Fund manager total exp</th>
+                                    <th>Fund manager info</th>
+                                    <th>Fund manager info</th>
+                                    <th>Fund return 1 Year</th>
+                                    <th>Fund return 3 Year</th>
                                     <th>Options</th>
                                 </tr>
                                 </thead>
@@ -64,6 +79,20 @@
                                     <td><a href="{{$debt_fund->fund_url}}" target="_blank">{{$debt_fund->fund_url}}</a></td>
                                     <td>{{$debt_fund->fund_risk}}</td>
                                     <td>{{$debt_fund->fund_return}}</td>
+                                    <td>{{$debt_fund->fund_age}}</td>
+                                    <td>{{$debt_fund->fund_nav}}</td>
+                                    <td>{{$debt_fund->fund_aum}}</td>
+                                    <td>{{$debt_fund->fund_goal}}</td>
+                                    <td>{{$debt_fund->fund_info}}</td>
+                                    <td>{{$debt_fund->fund_entry_load}}</td>
+                                    <td>{{$debt_fund->fund_exit_load}}</td>
+                                    <td>{{$debt_fund->fund_min_sip}}</td>
+                                    <td>{{$debt_fund->fund_min_lumpsum}}</td>
+                                    <td>{{$debt_fund->fund_manager_name}}</td>
+                                    <td>{{$debt_fund->fund_manager_total_exp}}</td>
+                                    <td>{{$debt_fund->fund_manager_info}}</td>
+                                    <td>{{$debt_fund->fund_return_1_year}}</td>
+                                    <td>{{$debt_fund->fund_return_3_year}}</td>
                                     <td>
                                         <a href="{{route('debt_funds.edit', $debt_fund->id)}}"><button class="btn btn-success btn-xs"><i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
 
@@ -83,6 +112,20 @@
                                     <th>URL</th>
                                     <th>Risk</th>
                                     <th>Return</th>
+                                    <th>Fund age</th>
+                                    <th>Fund nav</th>
+                                    <th>Fund aum</th>
+                                    <th>Fund goal</th>
+                                    <th>Fund info</th>
+                                    <th>Fund entry load</th>
+                                    <th>Fund exit load</th>
+                                    <th>Fund min sip</th>
+                                    <th>Fund min lumpsum</th>
+                                    <th>Fund manager name</th>
+                                    <th>Fund manager total exp</th>
+                                    <th>Fund manager info</th>
+                                    <th>Fund return 1 Year</th>
+                                    <th>Fund return 3 Year</th>
                                     <th>Options</th>
                                 </tr>
                                 </tfoot>

@@ -54,6 +54,20 @@
                                     <th>URL</th>
                                     <th>Start Date</th>
                                     <th>End Date</th>
+                                    <th>Fund age</th>
+                                    <th>Fund nav</th>
+                                    <th>Fund aum</th>
+                                    <th>Fund goal</th>
+                                    <th>Fund info</th>
+                                    <th>Fund entry load</th>
+                                    <th>Fund exit load</th>
+                                    <th>Fund min sip</th>
+                                    <th>Fund min lumpsum</th>
+                                    <th>Fund manager name</th>
+                                    <th>Fund manager total exp</th>
+                                    <th>Fund manager info</th>
+                                    <th>Fund return 1 Year</th>
+                                    <th>Fund return 3 Year</th>
                                     <th>Options</th>
                                 </tr>
                                 </thead>
@@ -66,6 +80,20 @@
                                     <td><a href="{{$fund->nfo_url}}" target="_blank">{{$fund->nfo_url}}</a></td>
                                     <td>{{$fund->nfo_start_date}}</td>
                                     <td>{{$fund->nfo_end_date}}</td>
+                                    <td>{{$fund->fund_age}}</td>
+                                    <td>{{$fund->fund_nav}}</td>
+                                    <td>{{$fund->fund_aum}}</td>
+                                    <td>{{$fund->fund_goal}}</td>
+                                    <td>{{$fund->fund_info}}</td>
+                                    <td>{{$fund->fund_entry_load}}</td>
+                                    <td>{{$fund->fund_exit_load}}</td>
+                                    <td>{{$fund->fund_min_sip}}</td>
+                                    <td>{{$fund->fund_min_lumpsum}}</td>
+                                    <td>{{$fund->fund_manager_name}}</td>
+                                    <td>{{$fund->fund_manager_total_exp}}</td>
+                                    <td>{{$fund->fund_manager_info}}</td>
+                                    <td>{{$fund->fund_return_1_year}}</td>
+                                    <td>{{$fund->fund_return_3_year}}</td>
                                     <td>
                                         <a href="{{route('funds.edit', $fund->id)}}"><button class="btn btn-success btn-xs"><i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
 
@@ -86,6 +114,20 @@
                                     <th>URL</th>
                                     <th>Start Date</th>
                                     <th>End Date</th>
+                                    <th>Fund age</th>
+                                    <th>Fund nav</th>
+                                    <th>Fund aum</th>
+                                    <th>Fund goal</th>
+                                    <th>Fund info</th>
+                                    <th>Fund entry load</th>
+                                    <th>Fund exit load</th>
+                                    <th>Fund min sip</th>
+                                    <th>Fund min lumpsum</th>
+                                    <th>Fund manager name</th>
+                                    <th>Fund manager total exp</th>
+                                    <th>Fund manager info</th>
+                                    <th>Fund return 1 Year</th>
+                                    <th>Fund return 3 Year</th>
                                     <th>Options</th>
                                 </tr>
                                 </tfoot>

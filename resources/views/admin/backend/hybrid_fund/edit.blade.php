@@ -58,6 +58,109 @@
                             </div>
 
                         </div>
+
+                        {{--qwerty--}}
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Age</label>
+                                    <input type="text" required name="fund_age" value="{{$hybrid_fund->fund_age}}" class="form-control" id="exampleInputEmail1" placeholder="Enter url">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Nav</label>
+                                    <input type="text" required name="fund_nav" value="{{$hybrid_fund->fund_nav}}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPhone">Fund Aum</label>
+                                    <input type="text" required name="fund_aum" value="{{$hybrid_fund->fund_aum}}" class="form-control" id="exampleInputPhone" placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+                        </div>
+                        {{--qwerty--}}
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Goal</label>
+                                    <input type="text" required name="fund_goal" value="{{$hybrid_fund->fund_goal}}" class="form-control" id="exampleInputEmail1" placeholder="Enter url">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Info</label>
+                                    <input type="text" required name="fund_info" value="{{$hybrid_fund->fund_info}}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPhone">Fund Entry Load</label>
+                                    <input type="text" required name="fund_entry_load" value="{{$hybrid_fund->fund_entry_load}}" class="form-control" id="exampleInputPhone" placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Exit Load</label>
+                                    <input type="text" required name="fund_exit_load" value="{{$hybrid_fund->fund_exit_load}}" class="form-control" id="exampleInputEmail1" placeholder="Enter url">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Min Sip</label>
+                                    <input type="text" required name="fund_min_sip" value="{{$hybrid_fund->fund_min_sip}}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPhone">Fund Min Lumpsum</label>
+                                    <input type="text" required name="fund_min_lumpsum" value="{{$hybrid_fund->fund_min_lumpsum}}" class="form-control" id="exampleInputPhone" placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Manager Name</label>
+                                    <input type="text" required name="fund_manager_name" value="{{$hybrid_fund->fund_manager_name}}" class="form-control" id="exampleInputEmail1" placeholder="Enter url">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Manager Total Exp</label>
+                                    <input type="text" required name="fund_manager_total_exp" value="{{$hybrid_fund->fund_manager_total_exp}}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPhone">Fund Manager Info</label>
+                                    <input type="text" required name="fund_manager_info" value="{{$hybrid_fund->fund_manager_info}}" class="form-control" id="exampleInputPhone" placeholder="Enter Phone Number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Manager Name</label>
+                                    <input type="text" required name="fund_return_1_year" value="{{$hybrid_fund->fund_return_1_year}}" class="form-control" id="exampleInputEmail1" placeholder="Enter url">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Fund Manager Total Exp</label>
+                                    <input type="text" required name="fund_return_3_year" value="{{$hybrid_fund->fund_return_3_year}}" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <!-- /.card-body -->
 

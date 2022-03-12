@@ -53,6 +53,20 @@
                                     <th>URL</th>
                                     <th>Risk</th>
                                     <th>Return</th>
+                                    <th>Fund age</th>
+                                    <th>Fund nav</th>
+                                    <th>Fund aum</th>
+                                    <th>Fund goal</th>
+                                    <th>Fund info</th>
+                                    <th>Fund entry load</th>
+                                    <th>Fund exit load</th>
+                                    <th>Fund min sip</th>
+                                    <th>Fund min lumpsum</th>
+                                    <th>Fund manager name</th>
+                                    <th>Fund manager total exp</th>
+                                    <th>Fund manager info</th>
+                                    <th>Fund return 1 Year</th>
+                                    <th>Fund return 3 Year</th>
                                     <th>Options</th>
                                 </tr>
                                 </thead>
@@ -64,6 +78,20 @@
                                     <td><a href="{{$hybrid_fund->fund_url}}" target="_blank">{{$hybrid_fund->fund_url}}</a></td>
                                     <td>{{$hybrid_fund->fund_risk}}</td>
                                     <td>{{$hybrid_fund->fund_return}}</td>
+                                    <td>{{$hybrid_fund->fund_age}}</td>
+                                    <td>{{$hybrid_fund->fund_nav}}</td>
+                                    <td>{{$hybrid_fund->fund_aum}}</td>
+                                    <td>{{$hybrid_fund->fund_goal}}</td>
+                                    <td>{{$hybrid_fund->fund_info}}</td>
+                                    <td>{{$hybrid_fund->fund_entry_load}}</td>
+                                    <td>{{$hybrid_fund->fund_exit_load}}</td>
+                                    <td>{{$hybrid_fund->fund_min_sip}}</td>
+                                    <td>{{$hybrid_fund->fund_min_lumpsum}}</td>
+                                    <td>{{$hybrid_fund->fund_manager_name}}</td>
+                                    <td>{{$hybrid_fund->fund_manager_total_exp}}</td>
+                                    <td>{{$hybrid_fund->fund_manager_info}}</td>
+                                    <td>{{$hybrid_fund->fund_return_1_year}}</td>
+                                    <td>{{$hybrid_fund->fund_return_3_year}}</td>
                                     <td>
                                         <a href="{{route('hybrid_funds.edit', $hybrid_fund->id)}}"><button class="btn btn-success btn-xs"><i class="fa fa-edit" aria-hidden="true"></i> Edit</button></a>
 
@@ -83,6 +111,20 @@
                                     <th>URL</th>
                                     <th>Risk</th>
                                     <th>Return</th>
+                                    <th>Fund age</th>
+                                    <th>Fund nav</th>
+                                    <th>Fund aum</th>
+                                    <th>Fund goal</th>
+                                    <th>Fund info</th>
+                                    <th>Fund entry load</th>
+                                    <th>Fund exit load</th>
+                                    <th>Fund min sip</th>
+                                    <th>Fund min lumpsum</th>
+                                    <th>Fund manager name</th>
+                                    <th>Fund manager total exp</th>
+                                    <th>Fund manager info</th>
+                                    <th>Fund return 1 Year</th>
+                                    <th>Fund return 3 Year</th>
                                     <th>Options</th>
                                 </tr>
                                 </tfoot>
