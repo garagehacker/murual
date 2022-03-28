@@ -23,7 +23,7 @@ class CreateEquityFundsTable extends Migration
             $table->string('fund_nav');
             $table->string('fund_aum');
             $table->string('fund_goal');
-            $table->string('fund_info');
+            $table->text('fund_info');
             $table->string('fund_entry_load');
             $table->string('fund_exit_load');
             $table->string('fund_min_sip');

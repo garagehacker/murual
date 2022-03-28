@@ -149,13 +149,13 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Fund Manager Name</label>
+                                    <label for="exampleInputEmail1">Fund Return 1 year</label>
                                     <input type="text" required name="fund_return_1_year" class="form-control" id="exampleInputEmail1" placeholder="Enter url">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Fund Manager Total Exp</label>
+                                    <label for="exampleInputEmail1">Fund Return 3 year</label>
                                     <input type="text" required name="fund_return_3_year" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                                 </div>
                             </div>
